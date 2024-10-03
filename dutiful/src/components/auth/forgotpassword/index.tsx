@@ -5,7 +5,7 @@ import Button from '@/components/global/Button';
 import Link from 'next/link';
 
 
-const ResetPassword = () => {
+const ForgotPassword = () => {
     return (
         < div className="max-w-md mx-auto mt-8">
             <Link href="/auth/login">
@@ -17,11 +17,13 @@ const ResetPassword = () => {
             </div>
             <form>
                 <Input label="Email" type="email" />
-                <Button text="Send Email" className="w-full  my-3 bg-purple text-white " />
-                <p className='text-slate-400 text-center my-4'>Or <span className=' cursor-pointer text-purple'>Login</span></p>
+                <Link href="/auth/sent">
+                    <Button text="Send Email" className="w-full h-[58px] my-3 bg-purple text-white " />
+                </Link>
+                <p className='text-slate-400 text-center my-4'>Or <Link href="/auth/login"><span className=' cursor-pointer text-purple'>Login</span></Link></p>
             </form>
         </div>
     );
 };
 
-export default ResetPassword;
+export default ForgotPassword;

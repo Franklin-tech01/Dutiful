@@ -5,8 +5,12 @@ import Input from '@/components/global/Input'; // Assuming Input is in the same 
 import Button from "@/components/global/Button"; // Your existing button component
 import Link from 'next/link';
 
+
+
 // import AuthSwitcher from '@/components/global/Switcher';
 const LoginForm = () => {
+
+
     return (
         <div className="max-w-md mx-auto mt-8">
             <div>
@@ -18,13 +22,13 @@ const LoginForm = () => {
 
                 <Input label="Email" type="email" />
                 <Input label="Password" type="password" />
-                <Link href="/auth/reset">
+                <Link href="/auth/forgotpassword">
                     <p className='text-purple text-end '>Forgot password?</p>
                 </Link>
                 <div className="mt-6">
-                    <Button text="Login" className="w-full bg-purple text-white " />
+                    <Button text="Login" className="w-full h-[58px] bg-purple text-white " />
                 </div>
-                <p className='text-slate-400 text-center my-4'>Don't have an account? <span className=' cursor-pointer text-purple'>Sign Up</span></p>
+                <p className='text-slate-400 text-center my-4'>Don't have an account? <Link href="/auth/register"><span className=' cursor-pointer text-purple'>Sign Up</span></Link></p>
             </form>
         </div>
     );
