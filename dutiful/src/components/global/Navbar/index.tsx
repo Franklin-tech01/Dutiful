@@ -23,10 +23,12 @@ const Navbar = () => {
                     </Link>
                 </ul>
                 <div className='items-center flex'>
-                    <Link href="">
+                    <Link href="/auth/login">
                         <p className='text-2xl text-[#1E1E4B] px-5 py-8'>Login</p>
                     </Link>
-                    <Button text='Sign Up' className='border-2 border-[#603F8B]  text-[#603F8B] w-[175px] h-[59px]' />
+                    <Link href="/auth/register">
+                        <Button text='Sign Up' className='border-2 border-[#603F8B]  text-[#603F8B] w-[175px] h-[59px]' />
+                    </Link>
                 </div>
             </div>
 
